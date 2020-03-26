@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.neverendingstory.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="네버앤딩 스토리"
         tools:layout="@layout/fragment_home" />
 
     <fragment

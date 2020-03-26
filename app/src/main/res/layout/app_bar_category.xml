@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/category_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAlignment="center"
@@ -22,25 +22,16 @@
 
 
             <TextView
-                android:id="@+id/toolbar_text"
+                android:id="@+id/category_toolbar_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
-                android:text="네버앤딩 스토리"
+                android:text="카테고리"
                 android:textAlignment="center"
 
                 android:textColor="@color/colorMain"
                 android:textSize="18sp" />
 
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="center_horizontal"
-                android:rotation="50"
-                app:srcCompat="@drawable/favicon" />
 
         </androidx.appcompat.widget.Toolbar>
 
