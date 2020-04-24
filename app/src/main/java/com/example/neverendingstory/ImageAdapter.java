@@ -1,6 +1,7 @@
 package com.example.neverendingstory;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -22,12 +23,20 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ItemViewHold
 
     private ArrayList<String> dataList = new ArrayList<>();
     private Context context;
-
+    private OnItemClickListener mListener = null;
     /*
     public ImageAdapter(Context context, ArrayList<String> data) {
         this.context = context;
         this.dataList = data;
     }*/
+
+    public interface OnItemClickListener {
+        void onItemClick(View v, int pos);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener;
+    }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
         protected ImageView image1;
@@ -38,6 +47,21 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ItemViewHold
         public ItemViewHolder(View view) {
             super(view);
             this.view = view;
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+                    if(pos != RecyclerView.NO_POSITION) {
+                            if(mListener != null) {
+                                mListener.onItemClick(v, pos);
+                            }
+                    }
+
+                }
+            });
+
+
             image1 = view.findViewById(R.id.poster1);
             image2 = view.findViewById(R.id.poster2);
             image3 = view.findViewById(R.id.poster3);

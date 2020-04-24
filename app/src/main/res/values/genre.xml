@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="genre">
+        <item>전체장르</item>
+        <item>팬픽</item>
+        <item>판타지/SF</item>
+        <item>패러디</item>
+        <item>무협/사극</item>
+        <item>추리/스릴러</item>
+        <item>로맨스</item>
+        <item>기타</item>
+    </string-array>
+</resources>
